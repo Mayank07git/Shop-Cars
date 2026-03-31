@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1001",
+    "make": "Hyundai",
+    "model": "Creta",
+    "year": 2021,
+    "price": 1250000,
+    "mileage": 32000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "bodyType": "SUV",
+    "image": "/images/creta.jpg",
+    "featured": true
+  },
+  {
+    "id": "1002",
+    "make": "Honda",
+    "model": "City",
+    "year": 2019,
+    "price": 850000,
+    "mileage": 45000,
+    "fuelType": "Petrol",
+    "transmission": "Manual",
+    "bodyType": "Sedan",
+    "image": "/images/city.jpg",
+    "featured": true
+  },
+  {
+    "id": "1003",
+    "make": "Maruti Suzuki",
+    "model": "Swift",
+    "year": 2022,
+    "price": 680000,
+    "mileage": 15000,
+    "fuelType": "Petrol",
+    "transmission": "Manual",
+    "bodyType": "Hatchback",
+    "image": "/images/swift.jpg",
+    "featured": false
+  },
+  {
+    "id": "1004",
+    "make": "Toyota",
+    "model": "Fortuner",
+    "year": 2020,
+    "price": 3100000,
+    "mileage": 58000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "bodyType": "SUV",
+    "image": "/images/fortuner.jpg",
+    "featured": false
+  }
+]

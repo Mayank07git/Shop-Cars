@@ -1,0 +1,45 @@
+.carCard {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+}
+
+.carCard:hover {
+  transform: translateY(-5px); /* Lift up hovering effect */
+  box-shadow: var(--shadow-md);
+}
+
+.carImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.carInfo {
+  padding: 1.5rem;
+}
+
+.carTitle {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.carDetails {
+  display: flex;
+  gap: 15px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.carPrice {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}

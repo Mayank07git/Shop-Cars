@@ -1,0 +1,174 @@
+.container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 280px;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.filterGroup {
+  margin-bottom: 2rem;
+}
+
+.filterGroup h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.8rem;
+  color: var(--text-main);
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.checkboxLabel input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-color);
+}
+
+/* Grid Area styling */
+.mainContent {
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Hidden by default on Desktop */
+.mobileFilterBtn {
+  display: none;
+}
+
+.closeFilterBtn {
+  display: none;
+}
+
+.filterOverlay {
+  display: none;
+}
+
+/* ---- Skeleton Loading Animation ---- */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeletonCard {
+  height: 350px; /* Matching the real CarCard height */
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+
+/* --- Mobile Responsiveness (Bottom Drawer) --- */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  
+  /* The Floating 'Filters' Button at the bottom of the mobile screen */
+  .mobileFilterBtn {
+    margin: 2rem auto 0;
+    display: block;
+    position: sticky;
+    bottom: 2rem;
+    width: max-content;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    z-index: 90;
+    cursor: pointer;
+  }
+
+  /* Converting the Sidebar into a Bottom-Up Popup Drawer */
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 75vh;
+    background: white;
+    z-index: 1000;
+    border-radius: 30px 30px 0 0;
+    overflow-y: auto; /* Allow scrolling inside the drawer */
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.15);
+    
+    /* Hide below the screen when closed */
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  /* Sliding Up Animation trigger */
+  .sidebar.open {
+    transform: translateY(0);
+  }
+
+  /* The little grey handle bar to close the drawer */
+  .closeFilterBtn {
+    display: block;
+    width: 50px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 3px;
+    margin: 0 auto 2rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Dimming the background behind the drawer */
+  .filterOverlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+}
