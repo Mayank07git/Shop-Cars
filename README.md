@@ -3,7 +3,7 @@
 A high-performance, fully responsive car marketplace web application built using **Next.js** and **Vanilla CSS Modules**. This project demonstrates intermediate-level frontend architecture, dynamic routing, and advanced UI/UX patterns.
 
 ## 🚀 Live Demo
-[Aapka Vercel URL yahan paste karein]
+https://shop-cars-nu.vercel.app/
 
 ## ✨ Key Features
 - **Dynamic Routing:** Utilizes Next.js `[id].js` routes for automated product pages.
